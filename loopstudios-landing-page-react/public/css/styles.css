@@ -1,0 +1,89 @@
+.header {
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  margin: 0;
+  width: 100%;
+}
+
+.header .nav-center {
+  background: transparent;
+  padding: 25px 30px 25px 45px;
+  position: relative;
+}
+
+.header .nav-center button {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+.header .nav-center .menu-items {
+  padding-right: 100px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.header .nav-center .menu-items ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'Alata';
+  list-style: none;
+  top: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.header .nav-center .menu-items ul a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.header .nav-center .menu-items ul a hr {
+  margin: 0;
+  padding: 0;
+  width: 5px;
+}
+
+.header .nav-center .menu-items ul a:hover {
+  border-bottom: 2.5px solid white;
+  text-decoration: none;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.header .test {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+}
+
+.header .test[data-isOpen="true"] {
+  width: 300px;
+  height: 300px;
+}
+
+@media screen and (max-width: 376px) {
+  .header button {
+    visibility: visible;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=styles.css.map */
