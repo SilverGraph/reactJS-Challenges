@@ -1,33 +1,42 @@
 .header {
   background-image: url("../images/desktop/image-hero.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 625px;
   margin: 0;
-  width: 100%;
+  padding: 25px 45px;
 }
 
 .header .nav-center {
   background: transparent;
-  padding: 25px 30px 25px 45px;
-  position: relative;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-.header .nav-center button {
+.header .nav-center #menu-icon, .header .nav-center #close-icon, .header .nav-center #menu-div {
   position: absolute;
   right: 0;
+  visibility: hidden;
   z-index: 10;
 }
 
 .header .nav-center .menu-items {
-  padding-right: 100px;
-  position: absolute;
-  right: 0;
+  padding-right: 50px;
+  position: relative;
+  width: 100%;
+  visibility: visible;
   z-index: 1;
 }
 
 .header .nav-center .menu-items ul {
-  position: relative;
+  font-family: 'Alata';
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+
+.header .nav-center .menu-items ul span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,27 +44,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-family: 'Alata';
-  list-style: none;
-  top: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  position: absolute;
+  right: 0;
+  top: -15px;
 }
 
-.header .nav-center .menu-items ul a {
+.header .nav-center .menu-items ul span li a {
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
 }
 
-.header .nav-center .menu-items ul a hr {
-  margin: 0;
-  padding: 0;
-  width: 5px;
-}
-
-.header .nav-center .menu-items ul a:hover {
+.header .nav-center .menu-items ul span li a:hover {
   border-bottom: 2.5px solid white;
   text-decoration: none;
 }
@@ -76,9 +76,107 @@
   height: 300px;
 }
 
+.header .banner-text {
+  border: 1px solid white;
+  color: white;
+  font-family: 'Josefin Sans';
+  font-size: 3rem;
+  font-weight: 100;
+  margin: 50px 20px;
+  padding: 50px 40px;
+  width: 900px;
+}
+
 @media screen and (max-width: 376px) {
-  .header button {
+  .header {
+    background-image: url("../images/mobile/image-hero.jpg");
+    background-size: cover;
+    height: 615px;
+    padding: 0;
+  }
+  .header nav {
+    padding: 0;
+  }
+  .header .nav-center {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .header .nav-center img {
+    position: relative;
+    left: -25px;
+  }
+  .header .nav-center h6 {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    z-index: 10;
+  }
+  .header .nav-center #menu-icon, .header .nav-center #close-icon {
+    position: absolute;
+    right: -325px;
     visibility: visible;
+    z-index: 10;
+  }
+  .header .nav-center #menu-div {
+    position: relative;
+    visibility: visible;
+  }
+  .header .nav-center .menu-items {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    left: 0;
+    margin: 0;
+    padding: 41.5px;
+    position: absolute;
+    width: 100%;
+  }
+  .header .nav-center .menu-items ul {
+    background-color: black;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 835px;
+    position: absolute;
+    top: -25px;
+    width: 100%;
+  }
+  .header .nav-center .menu-items ul span {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: -20px;
+    position: relative;
+    top: 150px;
+  }
+  .header .nav-center .menu-items ul span li {
+    font-family: 'Josefin Sans';
+    font-size: 2rem;
+    margin: 20px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .header .banner-text {
+    padding: 25px;
+    width: auto;
+  }
+  .header .banner-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header .banner-text {
+    font-size: 2.4rem;
+    font-weight: 100;
+    width: auto;
   }
 }
 
