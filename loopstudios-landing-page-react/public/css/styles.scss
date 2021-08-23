@@ -1,7 +1,16 @@
 @import './variables';
 @import './header';
+@import './description';
+@import './cards';
+@import './footer';
 
 body {
     margin: 0;
     padding: 0;
+
+    .attribution {
+        font-family: 'Alata';
+        margin: auto;
+        text-align: center;
+    }
 }

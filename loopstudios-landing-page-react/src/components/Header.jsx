@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import logo from './logo.svg'
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -7,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Headers() {
+  
   const classes = useStyles();
 
   const [showLinks, setShowLinks] = useState(false);
@@ -42,11 +42,15 @@ export default function Headers() {
       openMenu.current.style.visibility = 'hidden'
       closeMenu.current.style.visibility = 'visible'
       linksRef.current.style.visibility = 'visible'
+      document.body.style.overflow = "hidden"
+      // window.location.reload();
     } if(!showLinks && displayWidth <= 376) {
       linksContainerRef.current.style.height = '0';
       openMenu.current.style.visibility = 'visible'
       closeMenu.current.style.visibility = 'hidden'
       linksRef.current.style.visibility = 'hidden'
+      document.body.style.overflow = "visible"
+      // window.location.reload();
     }
   }, [showLinks]);
 
@@ -64,17 +68,17 @@ export default function Headers() {
             </IconButton>
 
             <Typography variant="h6" color="inherit">
-              <img src={logo} alt="" />
+              <img src="../../images/logo.svg" alt="" />
             </Typography>
 
             <div className="menu-items" ref={linksContainerRef}>
               <ul ref={linksRef}>
                 <span>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Support</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Careers</a></li>
+                <li><a href="/">Events</a></li>
+                <li><a href="/">Products</a></li>
+                <li><a href="/">Support</a></li>
                 </span>
               </ul>
             </div>

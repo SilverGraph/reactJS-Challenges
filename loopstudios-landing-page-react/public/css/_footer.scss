@@ -1,0 +1,127 @@
+@import './variables';
+@import './header';
+
+.footer {
+    background-color: $black;
+    color: $white;
+    display: flex;
+    font-family: 'Alata';
+    padding: 60px 80px 40px;
+    justify-content: space-between;
+
+    #footer-main {
+        height: fit-content;
+
+        img {
+            margin: 0 10px;
+        }
+
+        .menu-items {
+            font-family: 'Alata';
+            
+            ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    color: $white;
+                    margin: 0 10px;
+
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #social-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .social-icons {
+            
+            p {
+                img {
+                    float: right;
+                    margin: 0 5px;
+                    padding: 5px;
+
+                    &:hover {
+                        border-bottom: 2px solid $white;
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: $primary;
+            text-align: right;
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .footer {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 0;
+
+        #footer-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                margin: 20px auto;
+            }
+
+            .menu-items {
+
+                ul {
+                    flex-direction: column;
+                    text-align: center;
+
+                    li {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        #social-main {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            .social-icons {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 377px) and (max-width: 1200px) {
+    .footer {
+        padding: 20px 40px;
+
+        #social-main {
+            height: fit-content;
+            p {
+                margin: 10px 0;
+            }
+        }
+    }
+}

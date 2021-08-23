@@ -1,0 +1,170 @@
+@import './variables';
+
+.cards-main-div {
+    margin: 50px 0;
+    padding: 0 125px;
+
+    nav {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h1 {
+            font-family: 'Josefin Sans';
+            font-size: 3.75rem;
+        }
+
+        button {
+            background-color: $white;
+            border: 1px solid $black;
+            color: $black;
+            height: 50px;
+            letter-spacing: 5px;
+            transition: all ease-in-out 0.25s;
+            width: 150px;
+
+            &:hover {
+                background-color: $black;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .cards-container {
+        margin: auto;
+        width: fit-content;
+
+        #cards-div {
+            column-gap: 75px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            // margin: auto;
+            row-gap: 50px;
+
+            .image-container {
+                overflow: hidden;
+                position: relative;
+                transition: all ease-in-out 0.25s;
+                z-index: 1;
+
+                &:hover {
+                    h1 {
+                        color: $black;
+                    }
+                    img {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                        opacity: 0.5;
+                    }
+                }
+
+                h1 {
+                    bottom: 0;
+                    color: $white;
+                    font-family: 'Josefin Sans';
+                    margin: 20px;
+                    position: absolute;
+                    // width: fit-content;
+                    width: 65%;
+                    z-index: 1;
+                }
+                
+                img {
+                    position: relative;
+                    transition: all ease-in-out 0.25s;
+                    width: fit-content;
+                    z-index: 1;
+
+                    // &:hover {
+                    //     cursor: pointer;
+                    //     transform: scale(1.05);
+                    //     opacity: 0.5;
+                    // }
+                }
+            }
+
+            
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .cards-main-div {
+        padding: 0 20px 50px;
+        position: relative;
+    
+        nav {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                bottom: -20px;
+                // height: auto;
+                position: absolute;
+                // width: 75px;
+            }
+        }
+    
+        .cards-container {
+            // margin: auto;
+            // width: min-content;
+    
+            #cards-div {
+                column-gap: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 10px;
+                width: fit-content;
+
+                .image-container {
+                    h1 {
+                        font-size: 1.5rem;
+                        width: 40%;
+                    }
+
+                    img {
+                        margin-top: 20px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 377px) and (max-width: 1200px) {
+    .cards-main-div {
+        padding: 0 20px;
+    
+        nav {
+            display: flex;
+        }
+    
+        .cards-container {
+            // margin: auto;
+            width: fit-content;
+    
+            #cards-div {
+                column-gap: 10px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                justify-content: center;
+                row-gap: 10px;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
